@@ -24,6 +24,7 @@ en:
       This account is a virtual actor used to represent the server itself and not any individual user.
       It is used for federation purposes and should not be blocked unless you want to block the whole instance, in which case you should use a domain block.
     learn_more: Learn more
+    powered_by_mastodon: Powered by Mastodon
     privacy_policy: Privacy policy
     see_whats_happening: See what's happening
     server_stats: 'Server stats:'
@@ -47,7 +48,6 @@ en:
       other: users
     user_count_before: Home to
     what_is_mastodon: What is Mastodon?
-    powered_by_mastodon: Powered by Mastodon
   accounts:
     choices_html: "%{name}'s choices:"
     endorsements_hint: You can endorse people you follow from the web interface, and they will show up here.
