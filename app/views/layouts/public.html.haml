@@ -9,7 +9,7 @@
         %nav.header
           .nav-left
             = link_to root_url, class: 'brand' do
-              = svg_logo_full
+              = image_pack_tag 'logo_full.svg', alt: 'Toot Party'
 
             - unless whitelist_mode?
               = link_to t('directories.directory'), explore_path, class: 'nav-link optional' if Setting.profile_directory
@@ -41,8 +41,8 @@
               %li= link_to t('about.documentation'), 'https://docs.joinmastodon.org/'
               %li= link_to t('about.api'), 'https://docs.joinmastodon.org/api/guidelines/'
           .column-2
-            %h4= link_to t('about.what_is_mastodon'), 'https://joinmastodon.org/'
-            = link_to svg_logo, root_url, class: 'brand'
+            %h4= link_to t('about.powered_by_mastodon'), 'https://joinmastodon.org/'
+            = image_pack_tag 'logo.svg', alt: 'Toot Party', class: 'brand'
           .column-3
             %h4= site_hostname
             %ul

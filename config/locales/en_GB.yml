@@ -40,6 +40,7 @@ en_GB:
       other: users
     user_count_before: Home to
     what_is_mastodon: What is Mastodon?
+    powered_by_mastodon: Powered by Mastodon
   accounts:
     choices_html: "%{name}'s choices:"
     follow: Follow
@@ -584,7 +585,7 @@ en_GB:
     '500':
       content: We're sorry, but something went wrong on our end.
       title: This page is not correct
-    noscript_html: To use the Mastodon web application, please enable JavaScript. Alternatively, try one of the <a href="%{apps_path}">native apps</a> for Mastodon for your platform.
+    noscript_html: To use the Toot Party web application, please enable JavaScript. Alternatively, try one of the <a href="%{apps_path}">native apps</a> for Mastodon for your platform.
   exports:
     archive_takeout:
       date: Date
@@ -839,7 +840,7 @@ en_GB:
     title: Sessions
   settings:
     authorized_apps: Authorized apps
-    back: Back to Mastodon
+    back: Back to Toot Party
     delete: Account deletion
     development: Development
     edit_profile: Edit profile

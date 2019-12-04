@@ -271,10 +271,11 @@
   }
 
   .header {
+    $height: 48px;
     background: lighten($ui-base-color, 8%);
     box-shadow: 0 0 15px rgba($base-shadow-color, 0.2);
     border-radius: 4px;
-    height: 48px;
+    height: $height;
     margin: 10px 0;
     display: flex;
     align-items: stretch;
@@ -320,15 +321,15 @@
     }
 
     .brand {
+      $padding: 2px;
       display: block;
-      padding: 15px;
+      padding: $padding;
+      align-self: center;
 
-      svg {
+      img {
         display: block;
-        height: 18px;
-        width: auto;
+        height: $height - $padding * 2;
         position: relative;
-        bottom: -2px;
         fill: $primary-text-color;
 
         @media screen and (max-width: $no-gap-breakpoint) {
