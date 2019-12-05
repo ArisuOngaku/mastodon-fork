@@ -61,8 +61,8 @@ class LinkFooter extends React.PureComponent {
         <p>
           <FormattedMessage
             id='getting_started.open_source_notice'
-            defaultMessage='Mastodon is open source software. You can contribute or report issues on GitHub at {github}.'
-            values={{ github: <span><a href={source_url} rel='noopener' target='_blank'>{repository}</a> (v{version})</span> }}
+            defaultMessage='Toot Party is a fork of Mastodon. You can contribute or report issues on GitHub at {github}.'
+            values={{ github: <span><a href={source_url} rel='noopener' target='_blank'>ArisuOngaku/toot.party</a> (v{version})</span> }}
           />
         </p>
       </div>

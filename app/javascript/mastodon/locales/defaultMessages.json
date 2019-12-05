@@ -2534,7 +2534,7 @@
         "id": "navigation_bar.logout"
       },
       {
-        "defaultMessage": "Mastodon is open source software. You can contribute or report issues on GitHub at {github}.",
+        "defaultMessage": "Toot Party is a fork of Mastodon. You can contribute or report issues on GitHub at {github}.",
         "id": "getting_started.open_source_notice"
       }
     ],
