@@ -3,9 +3,11 @@
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/ArisuOngaku/toot.party.svg)][releases]
 [![CircleCI](https://img.shields.io/circleci/build/github/ArisuOngaku/toot.party/toot-party)][circleci]
+[![Translation status](http://translation.toot.party/widgets/toot-party/-/svg-badge.svg)][translation]
 
 [releases]: https://github.com/ArisuOngaku/toot.party/releases
 [circleci]: https://circleci.com/gh/ArisuOngaku/toot.party
+[translation]: https://translation.toot.party/engage/toot-party/?utm_source=widget
 
 Toot Party is a **free, open-source social network server** based on Mastodon (which is based on ActivityPub). We aim to stay up to date with new releases of Mastodon.
 
@@ -17,7 +19,7 @@ Mastodon and Toot Party are **free, open source software** licensed under **AGPL
 
 If your contribution would be relevant to the original Mastodon project, [please make it there](https://github.com/tootsuite/mastodon).
 
-You can open issues for bugs you've found or features you think are missing. You can also submit pull requests to this repository, or submit translations using Weblate. To get started, take a look at [CONTRIBUTING.md](CONTRIBUTING.md). Unlike the original project, you can't get paid for your contributions here (however you are free to make them there too).
+You can open issues for bugs you've found or features you think are missing. You can also submit pull requests to this repository, or [submit translations on Weblate](https://translation.toot.party/projects/toot-party). To get started, take a look at [CONTRIBUTING.md](CONTRIBUTING.md). Unlike the original project, you can't get paid for your contributions here (however you are free to make them there too).
 
 ## License
 
