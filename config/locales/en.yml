@@ -9,9 +9,9 @@ en:
     administered_by: 'Administered by:'
     api: API
     apps: Mobile apps
-    apps_platforms: Use Mastodon from iOS, Android and other platforms
+    apps_platforms: Use Toot Party (Mastodon) from iOS, Android and other platforms
     browse_directory: Browse a profile directory and filter by interests
-    browse_public_posts: Browse a live stream of public posts on Mastodon
+    browse_public_posts: Browse a live stream of public posts on Toot Party
     contact: Contact
     contact_missing: Not set
     contact_unavailable: N/A
@@ -598,8 +598,8 @@ en:
     delete_account: Delete account
     delete_account_html: If you wish to delete your account, you can <a href="%{path}">proceed here</a>. You will be asked for confirmation.
     description:
-      prefix_invited_by_user: "@%{name} invites you to join this server of Mastodon!"
-      prefix_sign_up: Sign up on Mastodon today!
+      prefix_invited_by_user: "@%{name} invites you to join Toot Party!"
+      prefix_sign_up: Sign up on Toot Party today!
       suffix: With an account, you will be able to follow people, post updates and exchange messages with users from any Mastodon server and more!
     didnt_get_confirmation: Didn't receive confirmation instructions?
     forgot_password: Forgot your password?
@@ -969,7 +969,7 @@ en:
       weibo: Weibo
     current_session: Current session
     description: "%{browser} on %{platform}"
-    explanation: These are the web browsers currently logged in to your Mastodon account.
+    explanation: These are the web browsers currently logged in to your Toot Party account.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1064,7 +1064,7 @@ en:
       <ul>
         <li><em>Basic account information</em>: If you register on this server, you may be asked to enter a username, an e-mail address and a password. You may also enter additional profile information such as a display name and biography, and upload a profile picture and header image. The username, display name, biography, profile picture and header image are always listed publicly.</li>
         <li><em>Posts, following and other public information</em>: The list of people you follow is listed publicly, the same is true for your followers. When you submit a message, the date and time is stored as well as the application you submitted the message from. Messages may contain media attachments, such as pictures and videos. Public and unlisted posts are available publicly. When you feature a post on your profile, that is also publicly available information. Your posts are delivered to your followers, in some cases it means they are delivered to different servers and copies are stored there. When you delete posts, this is likewise delivered to your followers. The action of reblogging or favouriting another post is always public.</li>
-        <li><em>Direct and followers-only posts</em>: All posts are stored and processed on the server. Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them. In some cases it means they are delivered to different servers and copies are stored there. We make a good faith effort to limit the access to those posts only to authorized persons, but other servers may fail to do so. Therefore it's important to review servers your followers belong to. You may toggle an option to approve and reject new followers manually in the settings. <em>Please keep in mind that the operators of the server and any receiving server may view such messages</em>, and that recipients may screenshot, copy or otherwise re-share them. <em>Do not share any dangerous information over Mastodon.</em></li>
+        <li><em>Direct and followers-only posts</em>: All posts are stored and processed on the server. Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them. In some cases it means they are delivered to different servers and copies are stored there. We make a good faith effort to limit the access to those posts only to authorized persons, but other servers may fail to do so. Therefore it's important to review servers your followers belong to. You may toggle an option to approve and reject new followers manually in the settings. <em>Please keep in mind that the operators of the server and any receiving server may view such messages</em>, and that recipients may screenshot, copy or otherwise re-share them. <em>Do not share any dangerous information over Toot Party.</em></li>
         <li><em>IPs and other metadata</em>: When you log in, we record the IP address you log in from, as well as the name of your browser application. All the logged in sessions are available for your review and revocation in the settings. The latest IP address used is stored for up to 12 months. We also may retain server logs which include the IP address of every request to our server.</li>
       </ul>
 
@@ -1075,7 +1075,7 @@ en:
       <p>Any of the information we collect from you may be used in the following ways:</p>
 
       <ul>
-        <li>To provide the core functionality of Mastodon. You can only interact with other people's content and post your own content when you are logged in. For example, you may follow other people to view their combined posts in your own personalized home timeline.</li>
+        <li>To provide the core functionality of Toot Party (Mastodon). You can only interact with other people's content and post your own content when you are logged in. For example, you may follow other people to view their combined posts in your own personalized home timeline.</li>
         <li>To aid moderation of the community, for example comparing your IP address with other known ones to determine ban evasion or other violations.</li>
         <li>The email address you provide may be used to send you information, notifications about other people interacting with your content or sending you messages, and to respond to inquiries, and/or other requests or questions.</li>
       </ul>
@@ -1165,7 +1165,7 @@ en:
     wrong_code: The entered code was invalid! Are server time and device time correct?
   user_mailer:
     backup_ready:
-      explanation: You requested a full backup of your Mastodon account. It's now ready for download!
+      explanation: You requested a full backup of your Toot Party account. It's now ready for download!
       subject: Your archive is ready for download
       title: Archive takeout
     warning:
@@ -1196,11 +1196,11 @@ en:
       full_handle_hint: This is what you would tell your friends so they can message or follow you from another server.
       review_preferences_action: Change preferences
       review_preferences_step: Make sure to set your preferences, such as which emails you'd like to receive, or what privacy level you’d like your posts to default to. If you don’t have motion sickness, you could choose to enable GIF autoplay.
-      subject: Welcome to Mastodon
+      subject: Welcome to Toot Party
       tip_federated_timeline: The federated timeline is a firehose view of the Mastodon network. But it only includes people your neighbours are subscribed to, so it's not complete.
       tip_following: You follow your server's admin(s) by default. To find more interesting people, check the local and federated timelines.
       tip_local_timeline: The local timeline is a firehose view of people on %{instance}. These are your immediate neighbours!
-      tip_mobile_webapp: If your mobile browser offers you to add Mastodon to your homescreen, you can receive push notifications. It acts like a native app in many ways!
+      tip_mobile_webapp: If your mobile browser offers you to add Toot Party to your homescreen, you can receive push notifications. It acts like a native app in many ways!
       tips: Tips
       title: Welcome aboard, %{name}!
   users:

@@ -155,7 +155,7 @@
         "id": "error.unexpected_crash.explanation"
       },
       {
-        "defaultMessage": "Try refreshing the page. If that does not help, you may still be able to use Mastodon through a different browser or native app.",
+        "defaultMessage": "Try refreshing the page. If that does not help, you may still be able to use Toot Party (Mastodon) through a different browser or native app.",
         "id": "error.unexpected_crash.next_steps"
       },
       {
@@ -2710,7 +2710,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Your draft will be lost if you leave Mastodon.",
+        "defaultMessage": "Your draft will be lost if you leave Toot Party.",
         "id": "ui.beforeunload"
       }
     ],
