@@ -28,13 +28,7 @@ class BootstrapTimelineService < BaseService
   def bootstrap_timeline_accounts
     return @bootstrap_timeline_accounts if defined?(@bootstrap_timeline_accounts)
 
-    accounts = []
-
-    if Setting.enable_bootstrap_timeline_accounts || Setting.enable_bootstrap_timeline_accounts.nil?
-      accounts = bootstrap_timeline_accounts_usernames.empty? ? admin_accounts : local_unlocked_accounts(bootstrap_timeline_accounts_usernames)
-    end
-
-    @bootstrap_timeline_accounts = accounts
+    @bootstrap_timeline_accounts = bootstrap_timeline_accounts_usernames.empty? ? admin_accounts : local_unlocked_accounts(bootstrap_timeline_accounts_usernames)
   end
 
   def bootstrap_timeline_accounts_usernames
