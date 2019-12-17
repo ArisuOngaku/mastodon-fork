@@ -21,7 +21,7 @@ module Mastodon
     end
 
     def suffix
-      '-5'
+      '-6'
     end
 
     def to_a
