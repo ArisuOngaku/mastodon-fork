@@ -1,7 +1,6 @@
----
 is:
   about:
-    about_hashtag_html: Þetta eru opinber tíst sem merkt eru með <strong>#%{hashtag}</strong>. Þú getur unnið með þau ef þú ert með skráðan aðgang einhversstaðar í skýjasambandinu.
+    about_hashtag_html: 'Þetta eru opinber tíst sem merkt eru með <strong>#%{hashtag}</strong>. Þú getur unnið með þau ef þú ert með skráðan aðgang einhversstaðar í skýjasambandinu.'
     about_mastodon_html: 'Samfélagsnet framtíðarinnar: Engar auglýsingar, ekkert eftirlit stórfyrirtækja, siðleg hönnun og engin miðstýring! Þú átt þín eigin gögn í Mastodon!'
     about_this: Um hugbúnaðinn
     active_count_after: virkt
@@ -198,11 +197,13 @@ is:
         change_email_user: "%{name} breytti tölvupóstfangi fyrir notandann %{target}"
         confirm_user: "%{name} staðfesti tölvupóstfang fyrir notandann %{target}"
         create_account_warning: "%{name} sendi aðvörun til %{target}"
+        create_announcement: "%{name} útbjó auglýsingu %{target}"
         create_custom_emoji: "%{name} sendi inn nýtt tjáningartákn %{target}"
         create_domain_allow: "%{name} setti lén %{target} á lista yfir leyft"
         create_domain_block: "%{name} útilokaði lénið %{target}"
         create_email_domain_block: "%{name} setti póstlén %{target} á lista yfir bannað"
         demote_user: "%{name} lækkaði notandann %{target} í tign"
+        destroy_announcement: "%{name} eyddi auglýsingu %{target}"
         destroy_custom_emoji: "%{name} henti út tjáningartákninu %{target}"
         destroy_domain_allow: "%{name} fjarlægði lén %{target} af lista yfir leyft"
         destroy_domain_block: "%{name} aflétti útilokun af léninu %{target}"
@@ -224,10 +225,26 @@ is:
         unassigned_report: "%{name} fjarlægði úthlutun af skýrslu %{target}"
         unsilence_account: "%{name} hætti að hylja notandaaðganginn %{target}"
         unsuspend_account: "%{name} tók notandaaðganginn %{target} úr bið"
+        update_announcement: "%{name} uppfærði auglýsingu %{target}"
         update_custom_emoji: "%{name} uppfærði tjáningartákn %{target}"
         update_status: "%{name} uppfærði stöðufærslu frá %{target}"
       deleted_status: "(eydd stöðufærsla)"
       title: Atvikaskrá
+    announcements:
+      destroyed_msg: Það tókst að eyða auglýsingunni!
+      edit:
+        title: Breyta auglýsingu
+      empty: Engar auglýsingar fundust.
+      live: Í beinni
+      new:
+        create: Búa til auglýsingu
+        title: Ný auglýsing
+      published_msg: Það tókst að birta auglýsinguna!
+      scheduled_for: Áætlað %{time}
+      scheduled_msg: Auglýsing var sett á áætlun!
+      title: Auglýsingar
+      unpublished_msg: Það tókst að taka auglýsinguna úr birtingu!
+      updated_msg: Það tókst að uppfæra auglýsinguna!
     custom_emojis:
       assign_category: Úthluta flokki
       by_domain: Lén
@@ -372,10 +389,12 @@ is:
       title: Boðsgestir
     pending_accounts:
       title: Notendaaðgangar í bið (%{count})
+    relationships:
+      title: "Vensl %{acct}"
     relays:
       add_new: Bæta við nýjum endurvarpa
       delete: Eyða
-      description_html: "<strong>Endurvarpi í skýjasambandi</strong> er milliþjónn sem skiptist á miklu magni opinberra tísta við aðra þjóna sem eru áskrifendur að honum og birta sín tíst á honum. <strong>Þetta getur hjálpað litlum og meðalstórum vefþjónum að uppgötva efni úr skýjasambandinu</strong>, sem annars myndi krefjast þess að staðværir notendur fylgist handvirkt með öðru fólki á fjartengdum vefþjónum."
+      description_html: <strong>Endurvarpi í skýjasambandi</strong> er milliþjónn sem skiptist á miklu magni opinberra tísta við aðra þjóna sem eru áskrifendur að honum og birta sín tíst á honum. <strong>Þetta getur hjálpað litlum og meðalstórum vefþjónum að uppgötva efni úr skýjasambandinu</strong>, sem annars myndi krefjast þess að staðværir notendur fylgist handvirkt með öðru fólki á fjartengdum vefþjónum.
       disable: Gera óvirkt
       disabled: Óvirkt
       enable: Virkja
@@ -563,10 +582,10 @@ is:
     new_report:
       body: "%{reporter} hefur kært %{target}"
       body_remote: Einhver frá %{domain} hefur kært %{target}
-      subject: Ný kæra vegna %{instance} (#%{id})
+      subject: 'Ný kæra vegna %{instance} (#%{id})'
     new_trending_tag:
       body: 'Myllumerkið #%{name} er í umræðunni í dag, en hefur ekki verið yfirfarið áður. Það mun ekki verða birt opinberlega nema að þú samþykkir það, annars geturðu vistað eyðublaðið óbreytt og aldrei heyrt á þetta minnst framar.'
-      subject: Nýtt myllumerki er komið til yfirferðar á %{instance} (#%{name})
+      subject: 'Nýtt myllumerki er komið til yfirferðar á %{instance} (#%{name})'
   aliases:
     add_new: Búa til samnefni (alias)
     created_msg: Tókst að búa til samnefni. Þú getur núna byrjað að færa gögn af gamla aðgangnum.
@@ -655,6 +674,9 @@ is:
     hint_html: "<strong>Ábending:</strong> Við munum ekki spyrja þig um lykilorðið aftur næstu klukkustundina."
     invalid_password: Ógilt lykilorð
     prompt: Staðfestu lykilorðið til að halda áfram
+  date:
+    formats:
+      default: "%d. %b, %Y"
   datetime:
     distance_in_words:
       about_x_hours: "%{count}kl."
@@ -731,6 +753,7 @@ is:
     hint_html: "<strong>Hvað eru myllumerki með aukið vægi?</strong> Þau eru birt áberandi á opinbera notandasniðinu þínu og gera fólki kleift að fletta í gegnum opinberu færslurnar þínar sérstaklega undir þessum myllumerkjum. Þau eru frábær aðferð við að halda utan um skapandi vinnu eða langtíma verkefni."
   filters:
     contexts:
+      account: Notandasnið
       home: Heimatímalína
       notifications: Tilkynningar
       public: Opinberar tímalínur
@@ -755,6 +778,7 @@ is:
     all: Allt
     changes_saved_msg: Það tókst að vista breytingarnar!
     copy: Afrita
+    delete: Eyða
     no_batch_actions_available: Engar magnvinnsluaðgerðir tiltækar á þessari síðu
     order_by: Raða eftir
     save_changes: Vista breytingar
@@ -884,11 +908,11 @@ is:
       title: Ný beiðni um að fylgjast með
     mention:
       action: Svara
-      body: "%{name} minntist á þig í:"
-      subject: "%{name} minntist á þig"
+      body: '%{name} minntist á þig í:'
+      subject: '%{name} minntist á þig'
       title: Ný tilvísun
     reblog:
-      body: "%{name} endurbirti stöðufærsluna þína:"
+      body: '%{name} endurbirti stöðufærsluna þína:'
       subject: "%{name} endurbirti stöðufærsluna þína"
       title: Ný endurbirting
   notifications:
@@ -926,11 +950,16 @@ is:
     other: Annað
     posting_defaults: Sjálfgefin gildi við gerð færslna
     public_timelines: Opinberar tímalínur
+  reactions:
+    errors:
+      limit_reached: Hámarki mismunandi viðbragða náð
+      unrecognized_emoji: er ekki þekkt tjáningartákn
   relationships:
     activity: Virkni aðgangs
     dormant: Sofandi
     followers: Fylgjendur
     following: Fylgist með
+    invited: Boðið
     last_active: Síðasta virkni
     most_recent: Nýjast
     moved: Fært
@@ -1058,7 +1087,7 @@ is:
       vote: Greiða atkvæði
     show_more: Sýna meira
     sign_in_to_participate: Skráðu þig inn til að taka þátt í samtalinu
-    title: "%{name}: „%{quote}‟"
+    title: '%{name}: „%{quote}‟'
     visibilities:
       private: Einungis fylgjendur
       private_long: Aðeins birt fylgjendum

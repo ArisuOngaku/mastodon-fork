@@ -1,4 +1,3 @@
----
 eo:
   simple_form:
     hints:
@@ -70,6 +69,8 @@ eo:
           silence: Silentigi
           suspend: Haltigi kaj nemalfereble forigi kontajn datumojn
         warning_preset_id: Uzi antaŭagorditan averton
+      announcement:
+        text: Anonco
       defaults:
         autofollow: Inviti al sekvi vian konton
         avatar: Profilbildo
@@ -148,9 +149,9 @@ eo:
         name: Kradvorto
         trendable: Permesi al ĉi tiu kradvorto aperi en furoraĵoj
         usable: Permesi tootojn uzi ĉiun tiun haketon
-    'no': Ne
+    'no': 'Ne'
     recommended: Rekomendita
     required:
       mark: "*"
       text: bezonata
-    'yes': Jes
+    'yes': 'Jes'

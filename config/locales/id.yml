@@ -1,8 +1,7 @@
----
 id:
   about:
-    about_hashtag_html: Ini adalah toot public yang ditandai dengan <strong>#%{hashtag}</strong>. Anda bisa berinteraksi dengan mereka jika anda memiliki akun dimanapun di fediverse.
-    about_mastodon_html: Mastodon adalah sebuah jejaring sosial <em>terbuka, open-source</em. Sebuah alternatif <em>desentralisasi</em> dari platform komersial, menjauhkan anda resiko dari sebuah perusahaan yang memonopoli komunikasi anda. Pilih server yang anda percayai &mdash; apapun yang anda pilih, anda tetap dapat berinteraksi dengan semua orang. Semua orang dapat menjalankan server Mastodon sendiri dan berpartisipasi dalam <em>jejaring sosial</em> dengan mudah.
+    about_hashtag_html: 'Ini adalah toot public yang ditandai dengan <strong>#%{hashtag}</strong>. Anda bisa berinteraksi dengan mereka jika anda memiliki akun dimanapun di fediverse.'
+    about_mastodon_html: 'Mastodon adalah sebuah jejaring sosial <em>terbuka, open-source</em. Sebuah alternatif <em>desentralisasi</em> dari platform komersial, menjauhkan anda resiko dari sebuah perusahaan yang memonopoli komunikasi anda. Pilih server yang anda percayai &mdash; apapun yang anda pilih, anda tetap dapat berinteraksi dengan semua orang. Semua orang dapat menjalankan server Mastodon sendiri dan berpartisipasi dalam <em>jejaring sosial</em> dengan mudah.'
     about_this: Tentang server ini
     active_count_after: aktif
     active_footnote: Pengguna Aktif Bulanan (PAB)
@@ -21,7 +20,8 @@ id:
     federation_hint_html: Dengan akun di %{instance} Anda dapat mengikuti orang di server Mastodon mana pun dan di luarnya.
     get_apps: Coba aplikasi mobile
     hosted_on: Mastodon dihosting di %{domain}
-    instance_actor_flash: Akun ini adalah aktor virtual yang dipakai untuk merepresentasikan server, bukan pengguna individu. Ini dipakai untuk tujuan federasi dan jangan diblokir kecuali Anda ingin memblokir seluruh instansi, yang seharusnya Anda pakai blokir domain.
+    instance_actor_flash: |
+      Akun ini adalah aktor virtual yang dipakai untuk merepresentasikan server, bukan pengguna individu. Ini dipakai untuk tujuan federasi dan jangan diblokir kecuali Anda ingin memblokir seluruh instansi, yang seharusnya Anda pakai blokir domain.
     learn_more: Pelajari selengkapnya
     privacy_policy: Kebijakan Privasi
     see_whats_happening: Lihat apa yang sedang terjadi
@@ -45,7 +45,7 @@ id:
     user_count_before: Tempat bernaung bagi
     what_is_mastodon: Apa itu Mastodon?
   accounts:
-    choices_html: 'Pilihan %{name}:'
+    choices_html: "Pilihan %{name}:"
     endorsements_hint: Anda dapat mempromosikan orang yang Anda ikuti lewat antar muka web, dan mereka akan muncul di sini.
     featured_tags_hint: Anda dapat mengunggulkan tagar tertentu yang akan ditampilkan di sini.
     follow: Ikuti
@@ -192,11 +192,13 @@ id:
         change_email_user: "%{name} mengubah alamat surel pengguna %{target}"
         confirm_user: "%{name} mengonfirmasi alamat surel pengguna %{target}"
         create_account_warning: "%{name} mengirim peringatan untuk %{target}"
+        create_announcement: "%{name} membuat pengumuman baru %{target}"
         create_custom_emoji: "%{name} mengunggah emoji baru %{target}"
         create_domain_allow: "%{name} memasukkan ke daftar putih domain %{target}"
         create_domain_block: "%{name} memblokir domain %{target}"
         create_email_domain_block: "%{name} memasukkan ke daftar hitam domain surel %{target}"
         demote_user: "%{name} menurunkan pengguna %{target}"
+        destroy_announcement: "%{name} menghapus pengumuman %{target}"
         destroy_custom_emoji: "%{name} menghapus emoji %{target}"
         destroy_domain_allow: "%{name} menghapus domain %{target} dari daftar putih"
         destroy_domain_block: "%{name} membuka blokir domain %{target}"
@@ -218,10 +220,26 @@ id:
         unassigned_report: "%{name} tidak menugaskan laporan %{target}"
         unsilence_account: "%{name} menghapus bungkaman akun %{target}"
         unsuspend_account: "%{name} menghapus penangguhan akun %{target}"
+        update_announcement: "%{name} memperbarui pengumuman %{target}"
         update_custom_emoji: "%{name} memperbarui emoji %{target}"
         update_status: "%{name} memperbarui status %{target}"
       deleted_status: "(status dihapus)"
       title: Log audit
+    announcements:
+      destroyed_msg: Pengumuman berhasil dihapus!
+      edit:
+        title: Edit pengumuman
+      empty: Pengumuman tidak ditemukan.
+      live: Siaran langsung
+      new:
+        create: Buat pengumuman
+        title: Pengumuman baru
+      published_msg: Pengumuman berhasil diterbitkan!
+      scheduled_for: Dijadwalkan untuk %{time}
+      scheduled_msg: Pengumuman dijadwalkan untuk publikasi!
+      title: Pengumuman
+      unpublished_msg: Pengumuman berhasil ditarik!
+      updated_msg: Pengumuman berhasil diperbarui!
     custom_emojis:
       assign_category: Beri kategori
       by_domain: Domain
@@ -364,10 +382,12 @@ id:
       title: Undang
     pending_accounts:
       title: Akun tertunda (%{count})
+    relationships:
+      title: "Hubungan %{acct}"
     relays:
       add_new: Tambah relai baru
       delete: Hapus
-      description_html: "<strong>Relai gabungan</strong> adalah server perantara yang menukarkan toot publik dalam jumlah besar antara server yang berlangganan dengan yang menerbitkannya. <strong>Ini akan membantu server kecil hingga medium menemukan konten dari fediverse</strong>, yang tentu saja mengharuskan pengguna lokal untuk mengikuti orang lain dari server remot."
+      description_html: <strong>Relai gabungan</strong> adalah server perantara yang menukarkan toot publik dalam jumlah besar antara server yang berlangganan dengan yang menerbitkannya. <strong>Ini akan membantu server kecil hingga medium menemukan konten dari fediverse</strong>, yang tentu saja mengharuskan pengguna lokal untuk mengikuti orang lain dari server remot.
       disable: Matikan
       disabled: Dimatikan
       enable: Aktifkan
@@ -492,6 +512,7 @@ id:
         title: Ketentuan layanan kustom
       site_title: Judul Situs
       spam_check_enabled:
+        desc_html: Mastodon dapat melaporkan secara otomatis akun yang mengirimkan pesan berulang tanpa diminta. Ini mungkin ada kesalahan.
         title: Automasi anti-spam
       thumbnail:
         desc_html: Dipakai sebagai pratinjau via OpenGraph dan API. Direkomendasikan 1200x630px
@@ -552,10 +573,10 @@ id:
     new_report:
       body: "%{reporter} telah melaporkan %{target}"
       body_remote: Seseorang dari %{domain} telah melaporkan %{target}
-      subject: Laporan baru untuk %{instance} (#%{id})
+      subject: 'Laporan baru untuk %{instance} (#%{id})'
     new_trending_tag:
       body: 'Tagar #%{name} sedang tren hari ini, tetapi belum ditinjau. Itu tidak akan ditampilkan secara publik kecuali Anda mengizinkannya, atau simpan saja borang sebagaimana mestinya untuk tidak mendengarnya lagi.'
-      subject: Tagar baru muncul untuk ditinjau di %{instance} (#%{name})
+      subject: 'Tagar baru muncul untuk ditinjau di %{instance} (#%{name})'
   aliases:
     add_new: Buat alias
     created_msg: Berhasil membuat alias baru. Sekarang Anda dapat memulai pindah dari akun lama.
@@ -644,6 +665,9 @@ id:
     hint_html: "<strong>Tip:</strong> Kami tidak akan meminta kata sandi Anda lagi untuk beberapa jam ke depan."
     invalid_password: Kata sandi tidak valid
     prompt: Konfirmasi kata sandi untuk melanjutkan
+  date:
+    formats:
+      default: "%d %b %Y"
   datetime:
     distance_in_words:
       about_x_hours: "%{count}j"

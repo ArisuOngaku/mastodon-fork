@@ -1,4 +1,3 @@
----
 kab:
   simple_form:
     hints:
@@ -21,7 +20,7 @@ kab:
       featured_tag:
         name: 'Ahat ad tebɣuḍ ad tesqedceḍ yiwen gar-asen:'
       imports:
-        data: Afaylu CSV yekka-d seg uqeddac-nniḍen Mastudun
+        data: Afaylu CSV id yusan seg uqeddac-nniḍen n Maṣṭudun
     labels:
       account:
         fields:
@@ -36,6 +35,7 @@ kab:
         confirm_password: Sentem awal uffir
         current_password: Awal uffir n tura
         data: Isefka
+        discoverable: Rnu amiḍan-a γer ukaram
         display_name: Isem ara d-yettwaskanen
         email: Tansa imayl
         header: Ixef
@@ -55,8 +55,8 @@ kab:
         comment: Awennit
       invite_request:
         text: Acimi tebɣiḍ ad ternuḍ iman-ik?
-    'no': Ala
+    'no': 'Ala'
     required:
       mark: "*"
       text: ilaq
-    'yes': Ih
+    'yes': 'Ih'

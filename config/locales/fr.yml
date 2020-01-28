@@ -1,7 +1,6 @@
----
 fr:
   about:
-    about_hashtag_html: Voici les pouets tagués avec <strong>#%{hashtag}</strong>. Vous pouvez interagir avec eux si vous avez un compte n’importe où dans le Fédiverse.
+    about_hashtag_html: 'Voici les pouets tagués avec <strong>#%{hashtag}</strong>. Vous pouvez interagir avec eux si vous avez un compte n’importe où dans le Fédiverse.'
     about_mastodon_html: 'Le réseau social de l''avenir : Pas d''annonces, pas de surveillance institutionnelle, conception éthique et décentralisation ! Possédez vos données avec Mastodon !'
     about_this: À propos
     active_count_after: actif·ve
@@ -233,6 +232,7 @@ fr:
       deleted_status: "(statut supprimé)"
       title: Journal d’audit
     announcements:
+      destroyed_msg: Annonce supprimée avec succès !
       edit:
         title: Modifier l’annonce
       empty: Aucune annonce trouvée.
@@ -240,9 +240,12 @@ fr:
       new:
         create: Créer une annonce
         title: Nouvelle annonce
-      published: Publié
-      time_range: Intervalle de temps
+      published_msg: Annonce publiée avec succès !
+      scheduled_for: Planifiée pour %{time}
+      scheduled_msg: Annonce planifiée pour publication !
       title: Annonces
+      unpublished_msg: L’annonce a été dépubliée avec succès !
+      updated_msg: L’annonce a été mise à jour avec succès !
     custom_emojis:
       assign_category: Attribuer une catégorie
       by_domain: Domaine
@@ -388,7 +391,7 @@ fr:
     pending_accounts:
       title: Comptes en attente (%{count})
     relationships:
-      title: Relations de %{acct}
+      title: "Relations de %{acct}"
     relays:
       add_new: Ajouter un nouveau relais
       delete: Effacer
@@ -580,10 +583,10 @@ fr:
     new_report:
       body: "%{reporter} a signalé %{target}"
       body_remote: Quelqu’un de %{domain} a signalé %{target}
-      subject: Nouveau signalement sur %{instance} (#%{id})
+      subject: 'Nouveau signalement sur %{instance} (#%{id})'
     new_trending_tag:
       body: 'Le hashtag #%{name} est populaire aujourd’hui, mais il n’a pas été approuvé. Il ne sera pas affiché publiquement à moins que vous l’autorisiez, ou sauvegardiez simplement ce formulaire tel quel pour ne plus jamais en entendre parler.'
-      subject: Nouveau hashtag en attente de traitement sur %{instance} (#%{name})
+      subject: 'Nouveau hashtag en attente de traitement sur %{instance} (#%{name})'
   aliases:
     add_new: Créer un alias
     created_msg: Un nouvel alias a été créé avec succès. Vous pouvez maintenant déménager depuis l'ancien compte.
@@ -777,7 +780,6 @@ fr:
     changes_saved_msg: Les modifications ont été enregistrées avec succès !
     copy: Copier
     delete: Supprimer
-    edit: Modifier
     no_batch_actions_available: Aucune action par lots disponible sur cette page
     order_by: Classer par
     save_changes: Enregistrer les modifications
@@ -893,7 +895,7 @@ fr:
         other: "%{count} nouvelles notifications depuis votre dernière visite \U0001F418"
       title: Pendant votre absence…
     favourite:
-      body: "%{name} a ajouté votre pouet à ses favoris :"
+      body: '%{name} a ajouté votre pouet à ses favoris :'
       subject: "%{name} a ajouté votre pouet à ses favoris"
       title: Nouveau favori
     follow:
@@ -907,11 +909,11 @@ fr:
       title: Nouvelle demande d’abonnement
     mention:
       action: Répondre
-      body: "%{name} vous a mentionné⋅e dans :"
-      subject: "%{name} vous a mentionné·e"
+      body: '%{name} vous a mentionné⋅e dans :'
+      subject: '%{name} vous a mentionné·e'
       title: Nouvelle mention
     reblog:
-      body: "%{name} a partagé votre statut :"
+      body: '%{name} a partagé votre statut :'
       subject: "%{name} a partagé votre statut"
       title: Nouveau partage
   notifications:
@@ -951,6 +953,7 @@ fr:
     public_timelines: Fils publics
   reactions:
     errors:
+      limit_reached: Limite de réactions différentes atteinte
       unrecognized_emoji: n’est pas un émoji reconnu
   relationships:
     activity: Activité du compte
