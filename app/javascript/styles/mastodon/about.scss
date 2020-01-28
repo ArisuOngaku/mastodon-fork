@@ -136,6 +136,17 @@ $small-breakpoint: 960px;
     }
   }
 
+  .labeled-table {
+    padding: 16px;
+    margin-bottom: 32px;
+    background-color: #00000012;
+    border-radius: 8px;
+
+    table {
+      margin-bottom: 0;
+    }
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;

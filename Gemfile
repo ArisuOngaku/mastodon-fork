@@ -5,7 +5,7 @@ ruby '>= 2.4.0', '< 2.7.0'
 
 gem 'pkg-config', '~> 1.3'
 
-gem 'puma', '~> 4.2'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 5.2.3'
 gem 'thor', '~> 0.20'
 
@@ -72,7 +72,7 @@ gem 'posix-spawn', git: 'https://github.com/rtomayko/posix-spawn', ref: '58465d2
 gem 'pundit', '~> 2.1'
 gem 'premailer-rails'
 gem 'rack-attack', '~> 6.1'
-gem 'rack-cors', '~> 1.0', require: 'rack/cors'
+gem 'rack-cors', '~> 1.1', require: 'rack/cors'
 gem 'rails-i18n', '~> 5.1'
 gem 'rails-settings-cached', '~> 0.6'
 gem 'redis', '~> 4.1', require: ['redis', 'redis/connection/hiredis']
@@ -85,7 +85,7 @@ gem 'sidekiq-scheduler', '~> 3.0'
 gem 'sidekiq-unique-jobs', '~> 6.0'
 gem 'sidekiq-bulk', '~>0.2.0'
 gem 'simple-navigation', '~> 4.1'
-gem 'simple_form', '~> 4.1'
+gem 'simple_form', '~> 5.0'
 gem 'sprockets-rails', '~> 3.2', require: 'sprockets/railtie'
 gem 'stoplight', '~> 2.1.3'
 gem 'strong_migrations', '~> 0.4'
