@@ -9,9 +9,10 @@ en:
     administered_by: 'Administered by:'
     api: API
     apps: Mobile apps
-    apps_platforms: Use Mastodon from iOS, Android and other platforms
+    apps_platforms: Use Toot Party (Mastodon) from iOS, Android and other platforms
     browse_directory: Browse a profile directory and filter by interests
-    browse_public_posts: Browse a live stream of public posts on Mastodon
+    browse_local_posts: Browse a live stream of public posts from this server
+    browse_public_posts: Browse a live stream of public posts on Toot Party
     contact: Contact
     contact_missing: Not set
     contact_unavailable: N/A
@@ -24,6 +25,7 @@ en:
       This account is a virtual actor used to represent the server itself and not any individual user.
       It is used for federation purposes and should not be blocked unless you want to block the whole instance, in which case you should use a domain block.
     learn_more: Learn more
+    powered_by_mastodon: Powered by Mastodon
     privacy_policy: Privacy policy
     see_whats_happening: See what's happening
     server_stats: 'Server stats:'
@@ -41,13 +43,11 @@ en:
       rejecting_media: 'Media files from these servers will not be processed or stored, and and no thumbnails will be displayed, requiring manual click-through to the original file:'
       silenced: 'Posts from these servers will be hidden in public timelines and conversations, and no notifications will be generated from their users'' interactions, unless you are following them:'
       suspended: 'No data from these servers will be processed, stored or exchanged, making any interaction or communication with users from these servers impossible:'
-    unavailable_content_html: Mastodon generally allows you to view content from and interact with users from any other server in the fediverse. These are the exceptions that have been made on this particular server.
+    unavailable_content_html: Toot Party usually allows you to view content from and interact with users from any other server in the fediverse. These are the exceptions we made. <strong>We reserve the right to change these lists at any time.</strong>
     user_count_after:
       one: user
       other: users
     user_count_before: Home to
-    what_is_mastodon: What is Mastodon?
-    powered_by_mastodon: Powered by Mastodon
   accounts:
     choices_html: "%{name}'s choices:"
     endorsements_hint: You can endorse people you follow from the web interface, and they will show up here.
@@ -78,6 +78,7 @@ en:
     roles:
       admin: Admin
       bot: Bot
+      group: Group
       moderator: Mod
     unavailable: Profile unavailable
     unfollow: Unfollow
@@ -118,9 +119,7 @@ en:
       email_status: Email status
       enable: Enable
       enabled: Enabled
-      feed_url: Feed URL
       followers: Followers
-      followers_url: Followers URL
       follows: Follows
       header: Header
       inbox_url: Inbox URL
@@ -148,10 +147,8 @@ en:
       no_account_selected: No accounts were changed as none were selected
       no_limits_imposed: No limits imposed
       not_subscribed: Not subscribed
-      outbox_url: Outbox URL
       pending: Pending review
       perform_full_suspension: Suspend
-      profile_url: Profile URL
       promote: Promote
       protocol: Protocol
       public: Public
@@ -174,8 +171,8 @@ en:
         moderator: Moderator
         staff: Staff
         user: User
-      salmon_url: Salmon URL
       search: Search
+      search_same_ip: Other users with the same IP
       shared_inbox_url: Shared inbox URL
       show:
         created_reports: Made reports
@@ -201,11 +198,15 @@ en:
         change_email_user: "%{name} changed the e-mail address of user %{target}"
         confirm_user: "%{name} confirmed e-mail address of user %{target}"
         create_account_warning: "%{name} sent a warning to %{target}"
+        create_announcement: "%{name} created new announcement %{target}"
         create_custom_emoji: "%{name} uploaded new emoji %{target}"
+        create_domain_allow: "%{name} whitelisted domain %{target}"
         create_domain_block: "%{name} blocked domain %{target}"
         create_email_domain_block: "%{name} blacklisted e-mail domain %{target}"
         demote_user: "%{name} demoted user %{target}"
+        destroy_announcement: "%{name} deleted announcement %{target}"
         destroy_custom_emoji: "%{name} destroyed emoji %{target}"
+        destroy_domain_allow: "%{name} removed domain %{target} from whitelist"
         destroy_domain_block: "%{name} unblocked domain %{target}"
         destroy_email_domain_block: "%{name} whitelisted e-mail domain %{target}"
         destroy_status: "%{name} removed status by %{target}"
@@ -225,10 +226,26 @@ en:
         unassigned_report: "%{name} unassigned report %{target}"
         unsilence_account: "%{name} unsilenced %{target}'s account"
         unsuspend_account: "%{name} unsuspended %{target}'s account"
+        update_announcement: "%{name} updated announcement %{target}"
         update_custom_emoji: "%{name} updated emoji %{target}"
         update_status: "%{name} updated status by %{target}"
       deleted_status: "(deleted status)"
       title: Audit log
+    announcements:
+      destroyed_msg: Announcement successfully deleted!
+      edit:
+        title: Edit announcement
+      empty: No announcements found.
+      live: Live
+      new:
+        create: Create announcement
+        title: New announcement
+      published_msg: Announcement successfully published!
+      scheduled_for: Scheduled for %{time}
+      scheduled_msg: Announcement scheduled for publication!
+      title: Announcements
+      unpublished_msg: Announcement successfully unpublished!
+      updated_msg: Announcement successfully updated!
     custom_emojis:
       assign_category: Assign category
       by_domain: Domain
@@ -340,13 +357,11 @@ en:
       delete: Delete
       destroyed_msg: Successfully deleted e-mail domain from blacklist
       domain: Domain
+      empty: No e-mail domains currently blacklisted.
       new:
         create: Add domain
         title: New e-mail blacklist entry
       title: E-mail blacklist
-    followers:
-      back_to_account: Back To Account
-      title: "%{acct}'s Followers"
     instances:
       by_domain: Domain
       delivery_available: Delivery is available
@@ -375,6 +390,8 @@ en:
       title: Invites
     pending_accounts:
       title: Pending accounts (%{count})
+    relationships:
+      title: "%{acct}'s relationships"
     relays:
       add_new: Add new relay
       delete: Delete
@@ -396,12 +413,17 @@ en:
       destroyed_msg: Report note successfully deleted!
     reports:
       account:
-        note: note
-        report: report
+        notes:
+          one: "%{count} note"
+          other: "%{count} notes"
+        reports:
+          one: "%{count} report"
+          other: "%{count} reports"
       action_taken_by: Action taken by
       are_you_sure: Are you sure?
       assign_to_self: Assign to me
       assigned: Assigned moderator
+      by_target_domain: Domain of reported account
       comment:
         none: None
       created_at: Reported
@@ -447,6 +469,8 @@ en:
         users: To logged-in local users
       domain_blocks_rationale:
         title: Show rationale
+      enable_bootstrap_timeline_accounts:
+        title: Enable default follows for new users
       hero:
         desc_html: Displayed on the frontpage. At least 600x100px recommended. When not set, falls back to server thumbnail
         title: Hero image
@@ -575,7 +599,12 @@ en:
     animations_and_accessibility: Animations and accessibility
     confirmation_dialogs: Confirmation dialogs
     discovery: Discovery
+    localization:
+      body: Mastodon is translated by volunteers.
+      guide_link: https://crowdin.com/project/mastodon
+      guide_link_text: Everyone can contribute.
     sensitive_content: Sensitive content
+    toot_layout: Toot layout
   application_mailer:
     notification_preferences: Change e-mail preferences
     salutation: "%{name},"
@@ -599,8 +628,8 @@ en:
     delete_account: Delete account
     delete_account_html: If you wish to delete your account, you can <a href="%{path}">proceed here</a>. You will be asked for confirmation.
     description:
-      prefix_invited_by_user: "@%{name} invites you to join this server of Mastodon!"
-      prefix_sign_up: Sign up on Mastodon today!
+      prefix_invited_by_user: "@%{name} invites you to join Toot Party!"
+      prefix_sign_up: Sign up on Toot Party today!
       suffix: With an account, you will be able to follow people, post updates and exchange messages with users from any Mastodon server and more!
     didnt_get_confirmation: Didn't receive confirmation instructions?
     forgot_password: Forgot your password?
@@ -646,6 +675,9 @@ en:
     hint_html: "<strong>Tip:</strong> We won't ask you for your password again for the next hour."
     invalid_password: Invalid password
     prompt: Confirm password to continue
+  date:
+    formats:
+      default: "%b %d, %Y"
   datetime:
     distance_in_words:
       about_x_hours: "%{count}h"
@@ -712,7 +744,6 @@ en:
     blocks: You block
     csv: CSV
     domain_blocks: Domain blocks
-    follows: You follow
     lists: Lists
     mutes: You mute
     storage: Media storage
@@ -723,6 +754,7 @@ en:
     hint_html: "<strong>What are featured hashtags?</strong> They are displayed prominently on your public profile and allow people to browse your public posts specifically under those hashtags. They are a great tool for keeping track of creative works or long-term projects."
   filters:
     contexts:
+      account: Profiles
       home: Home timeline
       notifications: Notifications
       public: Public timelines
@@ -734,6 +766,7 @@ en:
       invalid_irreversible: Irreversible filtering only works with home or notifications context
     index:
       delete: Delete
+      empty: You have no filters.
       title: Filters
     new:
       title: Add new filter
@@ -746,6 +779,7 @@ en:
     all: All
     changes_saved_msg: Changes successfully saved!
     copy: Copy
+    delete: Delete
     no_batch_actions_available: No batch actions available on this page
     order_by: Order by
     save_changes: Save changes
@@ -882,6 +916,10 @@ en:
       body: 'Your status was boosted by %{name}:'
       subject: "%{name} boosted your status"
       title: New boost
+  notifications:
+    email_events: Events for e-mail notifications
+    email_events_hint: 'Select events that you want to receive notifications for:'
+    other_settings: Other notifications settings
   number:
     human:
       decimal_units:
@@ -906,6 +944,7 @@ en:
       duration_too_long: is too far into the future
       duration_too_short: is too soon
       expired: The poll has already ended
+      invalid_choice: The chosen vote option does not exist
       over_character_limit: cannot be longer than %{max} characters each
       too_few_options: must have more than one item
       too_many_options: can't contain more than %{max} items
@@ -913,9 +952,16 @@ en:
     other: Other
     posting_defaults: Posting defaults
     public_timelines: Public timelines
+  reactions:
+    errors:
+      limit_reached: Limit of different reactions reached
+      unrecognized_emoji: is not a recognized emoji
   relationships:
     activity: Account activity
     dormant: Dormant
+    followers: Followers
+    following: Following
+    invited: Invited
     last_active: Last active
     most_recent: Most recent
     moved: Moved
@@ -970,7 +1016,7 @@ en:
       weibo: Weibo
     current_session: Current session
     description: "%{browser} on %{platform}"
-    explanation: These are the web browsers currently logged in to your Mastodon account.
+    explanation: These are the web browsers currently logged in to your Toot Party account.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -980,7 +1026,7 @@ en:
       firefox_os: Firefox OS
       ios: iOS
       linux: Linux
-      mac: Mac
+      mac: macOS
       other: unknown platform
       windows: Windows
       windows_mobile: Windows Mobile
@@ -1065,7 +1111,7 @@ en:
       <ul>
         <li><em>Basic account information</em>: If you register on this server, you may be asked to enter a username, an e-mail address and a password. You may also enter additional profile information such as a display name and biography, and upload a profile picture and header image. The username, display name, biography, profile picture and header image are always listed publicly.</li>
         <li><em>Posts, following and other public information</em>: The list of people you follow is listed publicly, the same is true for your followers. When you submit a message, the date and time is stored as well as the application you submitted the message from. Messages may contain media attachments, such as pictures and videos. Public and unlisted posts are available publicly. When you feature a post on your profile, that is also publicly available information. Your posts are delivered to your followers, in some cases it means they are delivered to different servers and copies are stored there. When you delete posts, this is likewise delivered to your followers. The action of reblogging or favouriting another post is always public.</li>
-        <li><em>Direct and followers-only posts</em>: All posts are stored and processed on the server. Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them. In some cases it means they are delivered to different servers and copies are stored there. We make a good faith effort to limit the access to those posts only to authorized persons, but other servers may fail to do so. Therefore it's important to review servers your followers belong to. You may toggle an option to approve and reject new followers manually in the settings. <em>Please keep in mind that the operators of the server and any receiving server may view such messages</em>, and that recipients may screenshot, copy or otherwise re-share them. <em>Do not share any dangerous information over Mastodon.</em></li>
+        <li><em>Direct and followers-only posts</em>: All posts are stored and processed on the server. Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them. In some cases it means they are delivered to different servers and copies are stored there. We make a good faith effort to limit the access to those posts only to authorized persons, but other servers may fail to do so. Therefore it's important to review servers your followers belong to. You may toggle an option to approve and reject new followers manually in the settings. <em>Please keep in mind that the operators of the server and any receiving server may view such messages</em>, and that recipients may screenshot, copy or otherwise re-share them. <em>Do not share any dangerous information over Toot Party.</em></li>
         <li><em>IPs and other metadata</em>: When you log in, we record the IP address you log in from, as well as the name of your browser application. All the logged in sessions are available for your review and revocation in the settings. The latest IP address used is stored for up to 12 months. We also may retain server logs which include the IP address of every request to our server.</li>
       </ul>
 
@@ -1076,7 +1122,7 @@ en:
       <p>Any of the information we collect from you may be used in the following ways:</p>
 
       <ul>
-        <li>To provide the core functionality of Mastodon. You can only interact with other people's content and post your own content when you are logged in. For example, you may follow other people to view their combined posts in your own personalized home timeline.</li>
+        <li>To provide the core functionality of Toot Party (Mastodon). You can only interact with other people's content and post your own content when you are logged in. For example, you may follow other people to view their combined posts in your own personalized home timeline.</li>
         <li>To aid moderation of the community, for example comparing your IP address with other known ones to determine ban evasion or other violations.</li>
         <li>The email address you provide may be used to send you information, notifications about other people interacting with your content or sending you messages, and to respond to inquiries, and/or other requests or questions.</li>
       </ul>
@@ -1166,7 +1212,7 @@ en:
     wrong_code: The entered code was invalid! Are server time and device time correct?
   user_mailer:
     backup_ready:
-      explanation: You requested a full backup of your Mastodon account. It's now ready for download!
+      explanation: You requested a full backup of your Toot Party account. It's now ready for download!
       subject: Your archive is ready for download
       title: Archive takeout
     warning:
@@ -1197,11 +1243,11 @@ en:
       full_handle_hint: This is what you would tell your friends so they can message or follow you from another server.
       review_preferences_action: Change preferences
       review_preferences_step: Make sure to set your preferences, such as which emails you'd like to receive, or what privacy level you’d like your posts to default to. If you don’t have motion sickness, you could choose to enable GIF autoplay.
-      subject: Welcome to Mastodon
+      subject: Welcome to Toot Party
       tip_federated_timeline: The federated timeline is a firehose view of the Mastodon network. But it only includes people your neighbours are subscribed to, so it's not complete.
       tip_following: You follow your server's admin(s) by default. To find more interesting people, check the local and federated timelines.
       tip_local_timeline: The local timeline is a firehose view of people on %{instance}. These are your immediate neighbours!
-      tip_mobile_webapp: If your mobile browser offers you to add Mastodon to your homescreen, you can receive push notifications. It acts like a native app in many ways!
+      tip_mobile_webapp: If your mobile browser offers you to add Toot Party to your homescreen, you can receive push notifications. It acts like a native app in many ways!
       tips: Tips
       title: Welcome aboard, %{name}!
   users:

@@ -41,6 +41,7 @@ import {
   FollowRequests,
   GenericNotFound,
   FavouritedStatuses,
+  BookmarkedStatuses,
   ListTimeline,
   Blocks,
   DomainBlocks,
@@ -59,7 +60,7 @@ import { previewState as previewVideoState } from './components/video_modal';
 import '../../components/status';
 
 const messages = defineMessages({
-  beforeUnload: { id: 'ui.beforeunload', defaultMessage: 'Your draft will be lost if you leave Mastodon.' },
+  beforeUnload: { id: 'ui.beforeunload', defaultMessage: 'Your draft will be lost if you leave Toot Party.' },
 });
 
 const mapStateToProps = state => ({
@@ -99,6 +100,7 @@ const keyMap = {
   goToRequests: 'g r',
   toggleHidden: 'x',
   toggleSensitive: 'h',
+  openMedia: 'e',
 };
 
 class SwitchingColumnsArea extends React.PureComponent {
@@ -164,7 +166,9 @@ class SwitchingColumnsArea extends React.PureComponent {
   }
 
   setRef = c => {
-    this.node = c.getWrappedInstance();
+    if (c) {
+      this.node = c.getWrappedInstance();
+    }
   }
 
   render () {
@@ -188,6 +192,7 @@ class SwitchingColumnsArea extends React.PureComponent {
 
           <WrappedRoute path='/notifications' component={Notifications} content={children} componentParams={{ shouldUpdateScroll: this.shouldUpdateScroll }} />
           <WrappedRoute path='/favourites' component={FavouritedStatuses} content={children} componentParams={{ shouldUpdateScroll: this.shouldUpdateScroll }} />
+          <WrappedRoute path='/bookmarks' component={BookmarkedStatuses} content={children} />
           <WrappedRoute path='/pinned' component={PinnedStatuses} content={children} componentParams={{ shouldUpdateScroll: this.shouldUpdateScroll }} />
 
           <WrappedRoute path='/search' component={Search} content={children} />

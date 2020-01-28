@@ -2,8 +2,8 @@
 
 lock '3.11.2'
 
-set :repo_url, ENV.fetch('REPO', 'https://github.com/tootsuite/mastodon.git')
-set :branch, ENV.fetch('BRANCH', 'master')
+set :repo_url, ENV.fetch('REPO', 'https://github.com/ArisuOngaku/toot.party.git')
+set :branch, ENV.fetch('BRANCH', 'toot-party')
 
 set :application, 'mastodon'
 set :rbenv_type, :user
