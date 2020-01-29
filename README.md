@@ -34,4 +34,9 @@ You should have received a copy of the GNU Affero General Public License along w
 
 ## What's different between Mastodon and Toot Party ?
 
-You can check the differences [here](https://github.com/tootsuite/mastodon/compare/master...ArisuOngaku:toot-party).
+You can check the differences by cloning this repository and running these commands:
+```
+git remote add -f upstream https://github.com/tootsuite/mastodon.git
+git remote update
+git diff toot-party remotes/upstream/master
+```
