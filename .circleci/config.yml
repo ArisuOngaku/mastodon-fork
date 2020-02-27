@@ -31,9 +31,9 @@ aliases:
   - &restore_ruby_dependencies
     restore_cache:
       keys:
-        - v2-ruby-dependencies-{{ checksum "/tmp/.ruby-version" }}-{{ checksum "Gemfile.lock" }}
-        - v2-ruby-dependencies-{{ checksum "/tmp/.ruby-version" }}-
-        - v2-ruby-dependencies-
+        - v3-ruby-dependencies-{{ checksum "/tmp/.ruby-version" }}-{{ checksum "Gemfile.lock" }}
+        - v3-ruby-dependencies-{{ checksum "/tmp/.ruby-version" }}-
+        - v3-ruby-dependencies-
 
   - &install_steps
     steps:
@@ -76,7 +76,7 @@ aliases:
         - run: bundle config set frozen 'true'
         - run: bundle install --jobs 16 --retry 3 && bundle clean
         - save_cache:
-            key: v2-ruby-dependencies-{{ checksum "/tmp/.ruby-version" }}-{{ checksum "Gemfile.lock" }}
+            key: v3-ruby-dependencies-{{ checksum "/tmp/.ruby-version" }}-{{ checksum "Gemfile.lock" }}
             paths:
               - ./.bundle/
               - ./vendor/bundle/
