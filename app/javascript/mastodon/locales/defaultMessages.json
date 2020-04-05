@@ -1139,7 +1139,7 @@
         "id": "search_results.statuses"
       },
       {
-        "defaultMessage": "Searching toots by their content is not enabled on this Mastodon server.",
+        "defaultMessage": "Searching toots by their content is not enabled on Toot Party.",
         "id": "search_results.statuses_fts_disabled"
       },
       {
