@@ -21,7 +21,7 @@ module Mastodon
     end
 
     def suffix
-      '-tootparty8'
+      '-tootparty9'
     end
 
     def to_a
