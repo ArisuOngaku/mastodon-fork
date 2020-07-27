@@ -421,7 +421,7 @@ GEM
     pghero (2.5.1)
       activerecord (>= 5)
     pkg-config (1.4.1)
-    premailer (1.11.1)
+    premailer (1.12.1)
       addressable
       css_parser (>= 1.6.0)
       htmlentities (>= 4.0.0)
@@ -512,6 +512,8 @@ GEM
     redis-store (1.9.0)
       redis (>= 4, < 5)
     regexp_parser (1.7.1)
+    reline (0.1.4)
+      io-console (~> 0.5)
     request_store (1.5.0)
       rack (>= 1.4)
     responders (3.0.1)
